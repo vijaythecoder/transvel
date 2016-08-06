@@ -2,7 +2,13 @@
     "name": "vijaytupakula/transvel",
     "description": "Automtatic translation using google api for laravel",
     "require": {
-        "ddctd143/google-translate": "^1.0"
+        "ddctd143/google-translate": "^1.0",
+        "illuminate/support": "^5.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Vijaytupakula\\Transvel\\": "src/"
+        }
     },
     "license": "MIT",
     "authors": [
