@@ -1,6 +1,8 @@
 # Transvel
 This package allows you to convert all files in `resources/lang/en` folder to required languages automatically. Its easy to configure and run simple command. 
 
+##### supports `laravel/framework": "5.2.*`
+
 ### Dependencies
 This package uses  [Dedicated Google Translate](https://github.com/ddctd143/google-translate/)
 
