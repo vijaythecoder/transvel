@@ -1,0 +1,15 @@
+{
+    "name": "vijaytupakula/transvel",
+    "description": "Automtatic translation using google api for laravel",
+    "require": {
+        "ddctd143/google-translate": "^1.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "vijay kumar",
+            "email": "contact@vijaykumar.me"
+        }
+    ],
+    "minimum-stability": "dev"
+}
