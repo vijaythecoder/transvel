@@ -92,11 +92,25 @@ class Translate extends Command
         $myArray = include $file;
         $convertedArray = [];
         foreach ($myArray as $langKey => $langValue) {
-             $result = $translator->setSourceLang('en')
-             ->setTargetLang($targetLang)
-             ->translate($langValue);
+             if(is_array($langValue))
+             {
+                foreach ($langValue as $langValueKey => $langSubValue) {
+                    $result = $translator->setSourceLang('en')
+                             ->setTargetLang($targetLang)
+                             ->translate($langValueKey);
 
-             $convertedArray[$langKey] = $result;
+                             $convertedArray[$langKey][$langValueKey] = $result;   
+                    }
+             }
+             else
+             {
+                $result = $translator->setSourceLang('en')
+                         ->setTargetLang($targetLang)
+                         ->translate($langValue);
+
+                         $convertedArray[$langKey] = $result;   
+             }
+             
         }
 
         if(!File::exists(base_path('resources/lang/'.$targetLang))) {
